@@ -5,6 +5,9 @@ export default defineConfig({
   plugins: [react()],
   base: '/tierpoint5demo/',
   build: {
-    outDir: 'docs'
+    outDir: 'docs',
+    assetsDir: 'assets',
+    emptyOutDir: true,
+    sourcemap: true
   }
 }); 
