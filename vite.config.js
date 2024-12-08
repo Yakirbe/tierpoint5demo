@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  // Add your repository name here
-  base: '/tierpoint5demo/',  // If your repo name is "tierpoint5demo"
-  // ... rest of your config
-}) 
+  plugins: [react()],
+  base: '/tierpoint5demo/',
+}); 

@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { UserEnvironment } from './pages/UserEnvironment';
 import { Overview } from './pages/management/Overview';
 import { Integrations } from './pages/management/Integrations';
@@ -8,7 +8,11 @@ import { PolicyManagement } from './pages/management/PolicyManagement';
 import { MonitorCheck } from 'lucide-react';
 import { RootLayout } from './components/layout/RootLayout';
 
-export function App() {
+export const App = () => {
+  useEffect(() => {
+    document.title = "tier.5";
+  }, []);
+
   return (
     <Router>
       <div className="min-h-screen bg-gray-100">
@@ -43,6 +47,6 @@ export function App() {
       </div>
     </Router>
   );
-}
+};
 
 export default App;
